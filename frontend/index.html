@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>WasteGraph — Collecte des Déchets</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<h1>WasteGraph — Collecte des déchets</h1>
+
+<div class="controls">
+
+    <button id="btn-coloring">Colorier (jours/équipes)</button>
+
+    <label>Source :</label>
+    <select id="source-select"></select>
+
+
+    <label>Points à visiter :</label>
+    <select id="multi-targets" multiple size="5"></select>
+
+    <button id="btn-dijkstra-multi">Dijkstra (multi)</button>
+</div>
+
+<div class="layout">
+    
+    <!-- Zone du graphe -->
+    <svg id="graph-canvas"></svg>
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+
+        <h3>Légende</h3>
+        <ul id="legend-list"></ul>
+
+        <h3>Résultats</h3>
+        <pre id="results"></pre>
+
+        <h3>Gestion du graphe</h3>
+
+        <!-- Ajouter un nœud -->
+        <div>
+            <h4>Ajouter un nœud</h4>
+            <input id="addNodeId" placeholder="ID (ex: H)">
+            <input id="addNodeX" placeholder="x">
+            <input id="addNodeY" placeholder="y">
+            <button onclick="addNode()">Ajouter</button>
+        </div>
+
+        <!-- Ajouter une arête -->
+        <div>
+            <h4>Ajouter une arête</h4>
+            <input id="addEdgeSrc" placeholder="src (ex: A)">
+            <input id="addEdgeDst" placeholder="dst (ex: B)">
+            <input id="addEdgeWeight" placeholder="poids">
+            <button onclick="addEdge()">Ajouter</button>
+        </div>
+
+        <!-- Modifier poids d'une arête -->
+        <div>
+            <h4>Modifier le poids d’une arête</h4>
+            <select id="constraintEdgeSelect"></select>
+            <input id="constraintValue" placeholder="nouveau poids">
+            <button onclick="updateConstraint()">Modifier</button>
+        </div>
+
+        <!-- Supprimer un nœud -->
+        <div>
+            <h4>Supprimer un nœud</h4>
+            <select id="deleteNodeSelect"></select>
+            <button onclick="deleteNode()">Supprimer</button>
+        </div>
+
+        <!-- Supprimer une arête -->
+        <div>
+            <h4>Supprimer une arête</h4>
+            <select id="deleteEdgeSelect"></select>
+            <button onclick="deleteEdge()">Supprimer</button>
+        </div>
+
+    </div>
+</div>
+
+<script src="app.js"></script>
+
+</body>
+</html>

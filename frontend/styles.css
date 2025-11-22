@@ -1,0 +1,146 @@
+/* ================
+   GLOBAL
+   ================ */
+body {
+    font-family: "Segoe UI", Arial, sans-serif;
+    padding: 20px;
+    background: #eef1f4;
+    margin: 0;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+/* ================
+   CONTROLS
+   ================ */
+.controls {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+
+.controls label {
+    font-weight: 600;
+}
+
+.controls select,
+.controls button,
+.controls input {
+    padding: 8px 10px;
+    font-size: 14px;
+    border-radius: 6px;
+    border: 1px solid #bbb;
+}
+
+button {
+    background: #1e90ff;
+    color: white;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+button:hover {
+    background: #1373d4;
+}
+
+/* ================
+   LAYOUT
+   ================ */
+.layout {
+    display: flex;
+    gap: 20px;
+}
+
+/* ================
+   GRAPH CANVAS
+   ================ */
+#graph-canvas {
+    width: 650px;
+    height: 550px;
+    background: #fff;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    box-shadow: 0px 2px 5px rgba(0,0,0,0.1);
+}
+
+/* ================
+   SIDEBAR
+   ================ */
+.sidebar {
+    background: #fff;
+    padding: 15px;
+    width: 280px;
+    height: 550px;
+    overflow-y: auto;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    box-shadow: 0px 2px 5px rgba(0,0,0,0.1);
+}
+
+.sidebar h3, .sidebar h4 {
+    margin-top: 20px;
+    margin-bottom: 8px;
+}
+
+/* petits champs */
+.sidebar input {
+    width: 90px;
+    margin-right: 6px;
+}
+
+/* ===================================
+   COLOR LEGEND
+   =================================== */
+.color {
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    border-radius: 4px;
+}
+
+.color-0 { background: #add8e6; }
+.color-1 { background: #ffe599; }
+color-2 { background: #b6d7a8; }
+
+/* ===================================
+   RESULTS BOX
+   =================================== */
+
+#results {
+    background: #fff;
+    border: 1px solid #ddd;
+    padding: 15px;
+    margin-top: 10px;
+    border-radius: 8px;
+    font-size: 14px;
+    line-height: 1.6;
+    max-height: 300px;
+    overflow-y: auto;
+}
+
+#results h3 {
+    margin-top: 0;
+    color: #333;
+}
+
+#results p {
+    margin: 8px 0;
+}
+
+
+
+.color-bubble {
+    display:inline-block;
+    width:15px;
+    height:15px;
+    border-radius:50%;
+    margin-right:8px;
+    border:1px solid #555;
+}
